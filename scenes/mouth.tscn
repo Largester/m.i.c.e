@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://bvbdkdsptosiv"]
+
+[ext_resource type="Texture2D" uid="uid://bcotyg1in1phr" path="res://sprits/New Piskel (5).png" id="1_hqyff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm3cv"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuly8"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n8r1"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5cmr"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0y4s"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7dct"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12a1s"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7b0w5"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0ut1"]
+atlas = ExtResource("1_hqyff")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o5ku5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rm3cv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuly8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n8r1")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5cmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0y4s")
+}],
+"loop": true,
+"name": &"Smile",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7dct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12a1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b0w5")
+}],
+"loop": true,
+"name": &"Talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0ut1")
+}],
+"loop": true,
+"name": &"Unhappy",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwibq"]
+
+[node name="Mouth" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o5ku5")
+animation = &"Open"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(1, 0.88)
+shape = SubResource("CircleShape2D_pwibq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
