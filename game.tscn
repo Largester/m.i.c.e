@@ -20,5 +20,7 @@ zoom = Vector2(4, 4)
 top_level = true
 position = Vector2(-70, -39)
 
-[node name="Marker2D" parent="." instance=ExtResource("2_e2o6t")]
-position = Vector2(-103, -63)
+[node name="Node" type="Node" parent="."]
+
+[node name="Marker2D" parent="Node" instance=ExtResource("2_e2o6t")]
+position = Vector2(-111, -49)

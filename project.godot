@@ -27,6 +27,7 @@ project/assembly_name="M.I.C.E"
 
 dropable=""
 zone=""
+player=""
 
 [input]
 

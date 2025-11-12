@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbpmugmrvnged"]
 
-[ext_resource type="Script" uid="uid://cjckelkoowba4" path="res://marker_2d.gd" id="1_owwkk"]
+[ext_resource type="Script" uid="uid://cjckelkoowba4" path="res://scripts/marker_2d.gd" id="1_owwkk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8bxr"]
 size = Vector2(64, 64)
 
-[node name="Marker2D" type="Marker2D"]
+[node name="Marker2D" type="Marker2D" groups=["zone"]]
 script = ExtResource("1_owwkk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["dropable"]]

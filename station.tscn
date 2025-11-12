@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyxg4wi5d0e8m"]
+
+[ext_resource type="Script" uid="uid://c6r3yj7n7r3nk" path="res://scripts/station.gd" id="1_xmj61"]
+[ext_resource type="PackedScene" uid="uid://cbpmugmrvnged" path="res://snap_marker.tscn" id="2_sum1q"]
+
+[node name="Station" type="Area2D"]
+script = ExtResource("1_xmj61")
+
+[node name="Marker2D" parent="." instance=ExtResource("2_sum1q")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

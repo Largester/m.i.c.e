@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi635"]
 size = Vector2(64, 64)
 
-[node name="platform" type="StaticBody2D" groups=["dropable", "zone"]]
+[node name="platform" type="StaticBody2D" groups=["zone"]]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 8

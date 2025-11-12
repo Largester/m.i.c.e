@@ -21,18 +21,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_iog6k")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_law6f"]
 size = Vector2(22, 44)
 
-[node name="mouse" type="Node2D" groups=["zone"]]
+[node name="mouse" type="Node2D" groups=["player"]]
 script = ExtResource("1_ouscy")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+physics_interpolation_mode = 2
 sprite_frames = SubResource("SpriteFrames_dexx5")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Area2D" type="Area2D" parent="."]
 
