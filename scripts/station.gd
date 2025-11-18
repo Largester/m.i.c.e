@@ -1,10 +1,15 @@
 extends Area2D
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var mouse: Node2D = $"."
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-func _on_Station_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		body.cooking()
 
-func _on_Station_body_exited(body: Node2D) -> void:
-	animation_player.play("idle")
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player"):
+		get_tree().get_first_node_in_group("player")
+		mouse.animated_sprite_2d.play("cooking")
+
+func _on_area_exited(area: Area2D) -> void:
+	if area.is_in_group("player"):
+		get_tree().get_first_node_in_group("player")
+		mouse.animated_sprite_2d.play("inactive")

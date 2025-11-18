@@ -106,5 +106,3 @@ autoplay = "Idle"
 position = Vector2(-1, -1)
 scale = Vector2(1, 0.88)
 shape = SubResource("CircleShape2D_pwibq")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
