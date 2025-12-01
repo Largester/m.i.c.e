@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://chxl3j0jtblt1"]
+
+[ext_resource type="Texture2D" uid="uid://bph1vftxxmeuy" path="res://sprits/horizontal bars/most rounded/progress bar most rounded progress dark grey.png" id="1_eo6f8"]
+[ext_resource type="Texture2D" uid="uid://c5jq4aehwu2tm" path="res://sprits/horizontal bars/most rounded/progress bar most rounded over.png" id="2_7vitu"]
+[ext_resource type="Texture2D" uid="uid://d3ibkn68a145s" path="res://sprits/horizontal bars/most rounded/progress bar most rounded progress cinnamon.png" id="3_u01d8"]
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+offset_left = -25.0
+offset_top = 33.0
+offset_right = 63.0
+offset_bottom = 49.0
+scale = Vector2(1.5299703, 1.1436094)
+value = 50.0
+texture_under = ExtResource("1_eo6f8")
+texture_over = ExtResource("2_7vitu")
+texture_progress = ExtResource("3_u01d8")

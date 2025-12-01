@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://epanaq0njkv4"]
+
+[ext_resource type="Script" uid="uid://cg11ta1wy0ayl" path="res://scenes/station_2.gd" id="1_0kcra"]
+[ext_resource type="Texture2D" uid="uid://bw8dglvlm0l6y" path="res://sprits/counter_stove.png" id="2_k8fup"]
+[ext_resource type="Texture2D" uid="uid://cdfxycdl36ifh" path="res://sprits/Counter.stove.png" id="3_pcp00"]
+[ext_resource type="PackedScene" uid="uid://cbpmugmrvnged" path="res://scenes/snap_marker.tscn" id="4_mmov2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7ugr"]
+atlas = ExtResource("2_k8fup")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72kuv"]
+atlas = ExtResource("2_k8fup")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qalsi"]
+atlas = ExtResource("2_k8fup")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olwe1"]
+atlas = ExtResource("3_pcp00")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87b1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7ugr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72kuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qalsi")
+}],
+"loop": true,
+"name": &"cooking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olwe1")
+}],
+"loop": true,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmj61"]
+size = Vector2(64, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10h6h"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0ot8"]
+bg_color = Color(0.9372549, 0, 0.16470589, 1)
+
+[node name="Station2" type="Area2D" groups=["dropoff"]]
+script = ExtResource("1_0kcra")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["dropoff"]]
+visibility_layer = 2
+sprite_frames = SubResource("SpriteFrames_87b1w")
+animation = &"cooking"
+autoplay = "inactive"
+
+[node name="Marker2D" parent="." groups=["dropoff"] instance=ExtResource("4_mmov2")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["dropoff"]]
+shape = SubResource("RectangleShape2D_xmj61")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -40.0
+offset_top = 34.0
+offset_right = 42.0
+offset_bottom = 61.0
+scale = Vector2(0.9615796, 0.43936455)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_10h6h")
+theme_override_styles/fill = SubResource("StyleBoxFlat_m0ot8")
+max_value = 5.0
+step = 1.0
+show_percentage = false
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
