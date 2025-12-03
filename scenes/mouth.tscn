@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bvbdkdsptosiv"]
 
-[ext_resource type="Script" uid="uid://dvutsdwyxjuus" path="res://scenes/mouth.gd" id="1_cr0hd"]
+[ext_resource type="Script" uid="uid://dvutsdwyxjuus" path="res://scripts/mouth.gd" id="1_cr0hd"]
 [ext_resource type="Texture2D" uid="uid://bcotyg1in1phr" path="res://sprits/New Piskel (5).png" id="1_hqyff"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rm3cv"]

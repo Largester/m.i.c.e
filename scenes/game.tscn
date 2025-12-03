@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://cvmnesrle14i8" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bnl20f3ryjy04" path="res://sprits/background_tile.png" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bdfsj3yl53dxt" path="res://scenes/mouse.tscn" id="3_p57ef"]
-[ext_resource type="Script" uid="uid://36wo50xdswwi" path="res://scenes/currentscorelabel.gd" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://36wo50xdswwi" path="res://scripts/currentscorelabel.gd" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cyxg4wi5d0e8m" path="res://scenes/station.tscn" id="6_p57ef"]
-[ext_resource type="Script" uid="uid://cg5u0lrry1d4f" path="res://scenes/currentorderlabel.gd" id="6_u5sy4"]
+[ext_resource type="Script" uid="uid://cg5u0lrry1d4f" path="res://scripts/currentorderlabel.gd" id="6_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://epanaq0njkv4" path="res://scenes/station2.tscn" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jktm"]

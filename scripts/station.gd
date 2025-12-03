@@ -6,7 +6,8 @@ extends Area2D
 @onready var timer: Timer = $Timer
 @onready var progress_bar: ProgressBar = $ProgressBar
 
-const max_progress = 5
+const min_progress = 0
+const max_progress = 6
 var progress = 0
 #func _ready() -> void:
 	#body_entered.connect(_on_body_entered)
@@ -24,8 +25,9 @@ func _ready() -> void:
 	#timer.start() 
 	#progress_bar.max_value = max_progress
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	progress_bar.value = progress
+	finish()
 
 func update_progress_ui():
 	#set_progress_bar()
@@ -53,3 +55,7 @@ func _on_timer_timeout() -> void:
 	#if progress < 0:
 		#progress = max_progress
 		#update_progress_ui()
+
+func finish():
+	if progress >= max_progress:
+		progress = min_progress

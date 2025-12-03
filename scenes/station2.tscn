@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://epanaq0njkv4"]
 
-[ext_resource type="Script" uid="uid://cg11ta1wy0ayl" path="res://scenes/station_2.gd" id="1_0kcra"]
+[ext_resource type="Script" uid="uid://cg11ta1wy0ayl" path="res://scripts/station_2.gd" id="1_0kcra"]
 [ext_resource type="Texture2D" uid="uid://bw8dglvlm0l6y" path="res://sprits/counter_stove.png" id="2_k8fup"]
 [ext_resource type="Texture2D" uid="uid://cdfxycdl36ifh" path="res://sprits/Counter.stove.png" id="3_pcp00"]
 [ext_resource type="PackedScene" uid="uid://cbpmugmrvnged" path="res://scenes/snap_marker.tscn" id="4_mmov2"]
@@ -81,7 +81,7 @@ scale = Vector2(0.9615796, 0.43936455)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_styles/background = SubResource("StyleBoxFlat_10h6h")
 theme_override_styles/fill = SubResource("StyleBoxFlat_m0ot8")
-max_value = 5.0
+max_value = 6.0
 step = 1.0
 show_percentage = false
 
