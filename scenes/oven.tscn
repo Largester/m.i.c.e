@@ -42,7 +42,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_olwe1")
 }],
 "loop": true,
-"name": &"inactive",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -57,14 +57,14 @@ bg_color = Color(0.0113443, 0.0113443, 0.0113443, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmmug"]
 bg_color = Color(1, 0.09411765, 0, 1)
 
-[node name="Station" type="Area2D" groups=["dropoff"]]
+[node name="Oven" type="Area2D" groups=["dropoff"]]
 script = ExtResource("1_xmj61")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["dropoff"]]
 visibility_layer = 2
 sprite_frames = SubResource("SpriteFrames_87b1w")
-animation = &"cooking"
-autoplay = "inactive"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Marker2D" parent="." groups=["dropoff"] instance=ExtResource("2_sum1q")]
 

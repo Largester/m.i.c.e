@@ -1,6 +1,6 @@
 extends Resource
-class_name ingrediants
+class_name ingredients
 
-@export var cooked_ingrediants: int = 0
-@export var chopped_ingrediants: int = 0
-@export var mixed_ingrediants: int = 0
+@export var cooked_ingredients: int = 0
+@export var chopped_ingredients: int = 0
+@export var mixed_ingredients: int = 0

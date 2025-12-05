@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=4 uid="uid://cliocng58qaa"]
+[gd_scene load_steps=11 format=4 uid="uid://cliocng58qaa"]
 
 [ext_resource type="Script" uid="uid://cvmnesrle14i8" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bnl20f3ryjy04" path="res://sprits/background_tile.png" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bdfsj3yl53dxt" path="res://scenes/mouse.tscn" id="3_p57ef"]
 [ext_resource type="Script" uid="uid://36wo50xdswwi" path="res://scripts/currentscorelabel.gd" id="5_p57ef"]
-[ext_resource type="PackedScene" uid="uid://cyxg4wi5d0e8m" path="res://scenes/station.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://cyxg4wi5d0e8m" path="res://scenes/oven.tscn" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://cg5u0lrry1d4f" path="res://scripts/currentorderlabel.gd" id="6_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://epanaq0njkv4" path="res://scenes/station2.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://epanaq0njkv4" path="res://scenes/cutting_board.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://bpec6samcemk3" path="res://scenes/counter.tscn" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jktm"]
 texture = ExtResource("2_iywne")
@@ -57,3 +58,7 @@ scale = Vector2(1.7927392, 1.9096327)
 [node name="Station2" parent="." instance=ExtResource("7_u5sy4")]
 position = Vector2(-0.99998474, 5)
 scale = Vector2(1.7741772, 1.9050907)
+
+[node name="Counter" parent="." instance=ExtResource("8_gee14")]
+position = Vector2(160, 5)
+scale = Vector2(1.8540001, 1.905)
