@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cliocng58qaa"]
+[gd_scene load_steps=13 format=4 uid="uid://cliocng58qaa"]
 
 [ext_resource type="Script" uid="uid://cvmnesrle14i8" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bnl20f3ryjy04" path="res://sprits/background_tile.png" id="2_iywne"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://cg5u0lrry1d4f" path="res://scripts/currentorderlabel.gd" id="6_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://epanaq0njkv4" path="res://scenes/cutting_board.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bpec6samcemk3" path="res://scenes/counter.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://cvwx881q8iahr" path="res://scenes/food.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://bvbdkdsptosiv" path="res://scenes/mouth.tscn" id="10_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jktm"]
 texture = ExtResource("2_iywne")
@@ -62,3 +64,9 @@ scale = Vector2(1.7741772, 1.9050907)
 [node name="Counter" parent="." instance=ExtResource("8_gee14")]
 position = Vector2(160, 5)
 scale = Vector2(1.8540001, 1.905)
+
+[node name="Food" parent="." instance=ExtResource("9_vtaks")]
+position = Vector2(28, -89)
+
+[node name="Mouth" parent="." instance=ExtResource("10_kvpfn")]
+position = Vector2(148, -90)

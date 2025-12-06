@@ -30,7 +30,9 @@ func set_progress_bar() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
-		player.get_node("AnimatedSprite2D").play("cooking")
+		var player_root = area.get_parent()
+		var player_sprite = player_root.get_node("AnimatedSprite2D")
+		player_sprite.play("cooking")
 		animated_sprite.play("cooking")
 		timer.start()
 

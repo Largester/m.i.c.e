@@ -28,8 +28,9 @@ func set_progress_bar() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
-		get_tree().get_first_node_in_group("player")
-		
+		var player_root = area.get_parent()
+		var player_sprite = player_root.get_node("AnimatedSprite2D")
+		player_sprite.play("mixing")
 		timer.start()
 
 func _on_area_exited(area: Area2D) -> void:

@@ -28,15 +28,15 @@ func set_progress_bar() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
-		get_tree().get_first_node_in_group("player")
-		player.animated_sprite.play("cutting")
+		var player_root = area.get_parent()
+		var player_sprite = player_root.get_node("AnimatedSprite2D")
+		player_sprite.play("chopping")
+		animated_sprite.play("chopping")
 		timer.start()
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("player"):
 		get_tree().get_first_node_in_group("player")
-		player.animated_sprite.play("idle")
-		animated_sprite.play("cutting")
 		timer.stop()
 func _on_timer_timeout() -> void:
 	print(progress)

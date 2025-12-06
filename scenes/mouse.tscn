@@ -158,6 +158,7 @@ _data = {
 size = Vector2(22, 44)
 
 [node name="mouse" type="Node2D" groups=["player"]]
+scale = Vector2(2, 2)
 script = ExtResource("1_ouscy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]

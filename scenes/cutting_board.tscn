@@ -15,7 +15,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_whm04")
 }],
 "loop": true,
-"name": &"cutting",
+"name": &"chopping",
 "speed": 5.0
 }]
 
@@ -35,8 +35,8 @@ script = ExtResource("1_0kcra")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["dropoff"]]
 visibility_layer = 2
 sprite_frames = SubResource("SpriteFrames_87b1w")
-animation = &"cutting"
-autoplay = "cutting"
+animation = &"chopping"
+autoplay = "chopping"
 
 [node name="Marker2D" parent="." groups=["dropoff"] instance=ExtResource("4_mmov2")]
 
