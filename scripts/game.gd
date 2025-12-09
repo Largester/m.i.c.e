@@ -15,3 +15,4 @@ func update_score():
 	if Global.current_score > Global.high_score:
 		Global.high_score = Global.current_score
 	Global.current_score = 0
+#https://www.youtube.com/watch?v=fwaCY2P5UMY

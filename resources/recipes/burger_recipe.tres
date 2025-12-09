@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemRecipe" load_steps=3 format=3 uid="uid://hch71n1uf7cj"]
+
+[ext_resource type="Script" uid="uid://bp78knvdue27a" path="res://resources/ingredients/ItemData.gd" id="1_31lb4"]
+[ext_resource type="Script" uid="uid://bbjwk0fae0c50" path="res://resources/recipes/ItemRecipe.gd" id="2_vvck2"]
+
+[resource]
+script = ExtResource("2_vvck2")
+recipe_name = "Burger"
+metadata/_custom_type_script = "uid://bbjwk0fae0c50"

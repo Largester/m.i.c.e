@@ -96,7 +96,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Mouth" type="Area2D"]
+[node name="Mouth" type="Area2D" groups=["stoparea"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_cr0hd")
 
@@ -110,5 +110,8 @@ sprite_frames = SubResource("SpriteFrames_o5ku5")
 animation = &"Idle"
 autoplay = "Idle"
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
