@@ -12,12 +12,15 @@ config_version=5
 
 config/name="M.I.C.E"
 run/main_scene="uid://daaxohe23uv2a"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="crut"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scripts/global.gd"
+CookingSystem="*res://scenes/cooking_system.tscn"
 
 [display]
 

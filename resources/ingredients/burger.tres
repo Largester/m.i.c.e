@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://bli2umbkw0m5k"]
-
-[ext_resource type="Script" uid="uid://bp78knvdue27a" path="res://resources/ingredients/ItemData.gd" id="1_npyth"]
-
-[resource]
-script = ExtResource("1_npyth")
-metadata/_custom_type_script = "uid://bp78knvdue27a"

@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="ItemRecipe" load_steps=3 format=3 uid="uid://ftan73ollllv"]
-
-[ext_resource type="Script" uid="uid://bp78knvdue27a" path="res://resources/ingredients/ItemData.gd" id="1_vh6v2"]
-[ext_resource type="Script" uid="uid://bbjwk0fae0c50" path="res://resources/recipes/ItemRecipe.gd" id="2_37oux"]
-
-[resource]
-script = ExtResource("2_37oux")
-metadata/_custom_type_script = "uid://bbjwk0fae0c50"
