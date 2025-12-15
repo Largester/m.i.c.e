@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://3bl0eqyij2sy" path="res://scenes/cooking_system.gd" id="1_qsbep"]
 
-[node name="CookingSystem" type="Control"]
+[node name="CookingSystem" type="Control" node_paths=PackedStringArray("recipe_container")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 41.0
 offset_bottom = 40.0
 script = ExtResource("1_qsbep")
+recipe_container = NodePath("Panel/ScrollContainer/Recipes")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(200, 140)

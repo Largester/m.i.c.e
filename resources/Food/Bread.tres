@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://drqpq07norwvr"]
+
+[ext_resource type="Texture2D" uid="uid://blghnl8o7u0og" path="res://sprits/New Piskel.png" id="1_k5biy"]
+[ext_resource type="Script" uid="uid://cv5ioyni0ysvw" path="res://Item.gd" id="2_li7qw"]
+
+[resource]
+script = ExtResource("2_li7qw")
+title = "Bread"
+icon = ExtResource("1_k5biy")
+metadata/_custom_type_script = "uid://cv5ioyni0ysvw"
