@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dctkmthq3jlro"]
+[gd_scene load_steps=6 format=3 uid="uid://dctkmthq3jlro"]
 
 [ext_resource type="Script" uid="uid://3bl0eqyij2sy" path="res://scenes/cooking_system.gd" id="1_qsbep"]
+[ext_resource type="Script" uid="uid://c4tfka8gq7jk0" path="res://Recipe.gd" id="2_qqmc6"]
+[ext_resource type="Resource" uid="uid://bwop2e2k2f31b" path="res://resources/recipes/Borscht_R.tres" id="3_0wj76"]
+[ext_resource type="Resource" uid="uid://os4imgttxxhe" path="res://resources/recipes/Burger_R.tres" id="4_5s6i4"]
+[ext_resource type="Resource" uid="uid://dnwy7edy5yipg" path="res://resources/recipes/Sushi_R.tres" id="5_qhe6w"]
 
 [node name="CookingSystem" type="Control" node_paths=PackedStringArray("recipe_container")]
 layout_mode = 3
@@ -8,6 +12,7 @@ anchors_preset = 0
 offset_right = 41.0
 offset_bottom = 40.0
 script = ExtResource("1_qsbep")
+recipes = Array[ExtResource("2_qqmc6")]([ExtResource("3_0wj76"), ExtResource("4_5s6i4"), ExtResource("5_qhe6w")])
 recipe_container = NodePath("Panel/ScrollContainer/Recipes")
 
 [node name="Panel" type="Panel" parent="."]

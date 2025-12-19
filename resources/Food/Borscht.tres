@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bueogmqtuj3tc"]
+
+[ext_resource type="Texture2D" uid="uid://du6fs71vxj05y" path="res://sprits/Products (2).png" id="1_5q43i"]
+[ext_resource type="Script" uid="uid://cv5ioyni0ysvw" path="res://Item.gd" id="2_43183"]
+
+[resource]
+script = ExtResource("2_43183")
+title = "Borscht"
+icon = ExtResource("1_5q43i")
+metadata/_custom_type_script = "uid://cv5ioyni0ysvw"

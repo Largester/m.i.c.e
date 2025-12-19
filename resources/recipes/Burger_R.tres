@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=8 format=3 uid="uid://os4imgttxxhe"]
+
+[ext_resource type="Texture2D" uid="uid://nxi1u7byegl2" path="res://sprits/Products (1).png" id="1_ex1lb"]
+[ext_resource type="Script" uid="uid://cv5ioyni0ysvw" path="res://Item.gd" id="2_dfb5g"]
+[ext_resource type="Resource" uid="uid://jao7yta2x45o" path="res://resources/ingredients/tomato.tres" id="3_7yu4x"]
+[ext_resource type="Resource" uid="uid://cyp0w3jvau2qt" path="res://resources/ingredients/potato.tres" id="4_oxlk2"]
+[ext_resource type="Resource" uid="uid://dt8plc2cibspu" path="res://resources/ingredients/milk.tres" id="5_paofj"]
+[ext_resource type="Resource" uid="uid://devw21fahscuo" path="res://resources/Food/Burger.tres" id="6_lif5g"]
+[ext_resource type="Script" uid="uid://c4tfka8gq7jk0" path="res://Recipe.gd" id="7_givqn"]
+
+[resource]
+script = ExtResource("7_givqn")
+name = "Burger"
+icon = ExtResource("1_ex1lb")
+ingredients = Dictionary[ExtResource("2_dfb5g"), int]({
+ExtResource("3_7yu4x"): 1,
+ExtResource("4_oxlk2"): 2,
+ExtResource("5_paofj"): 1
+})
+product = ExtResource("6_lif5g")
+metadata/_custom_type_script = "uid://c4tfka8gq7jk0"

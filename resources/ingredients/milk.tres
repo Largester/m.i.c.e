@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=4 format=3 uid="uid://dt8plc2cibspu"]
+
+[ext_resource type="Texture2D" uid="uid://bbtjhuwddcvps" path="res://sprits/Ingredients.png" id="1_bnxq1"]
+[ext_resource type="Script" uid="uid://gf5f5rgumryh" path="res://CropData.gd" id="2_uinmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4rfw"]
+atlas = ExtResource("1_bnxq1")
+region = Rect2(0, 128, 128, 64)
+
+[resource]
+script = ExtResource("2_uinmj")
+tile_name = "milk"
+atlas_coords = Array[Vector2i]([Vector2i(0, 2), Vector2i(1, 2)])
+title = "milk"
+icon = SubResource("AtlasTexture_g4rfw")
+metadata/_custom_type_script = "uid://gf5f5rgumryh"

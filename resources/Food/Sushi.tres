@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cafi5ehfiidme"]
+
+[ext_resource type="Texture2D" uid="uid://c58xo0loycvdy" path="res://sprits/Products (3).png" id="1_2654t"]
+[ext_resource type="Script" uid="uid://cv5ioyni0ysvw" path="res://Item.gd" id="2_evdi4"]
+
+[resource]
+script = ExtResource("2_evdi4")
+title = "Sushi"
+icon = ExtResource("1_2654t")
+metadata/_custom_type_script = "uid://cv5ioyni0ysvw"

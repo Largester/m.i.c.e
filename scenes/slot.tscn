@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ow4sccsdmbpm" path="res://slot.gd" id="1_4v6ba"]
 
 [node name="Slot" type="Panel"]
+z_index = -1
 custom_minimum_size = Vector2(20, 20)
 offset_right = 40.0
 offset_bottom = 40.0

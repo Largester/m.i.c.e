@@ -1,9 +1,17 @@
 extends Node2D
 
+@onready var crop_layer = $Crops
+
 var score = 0
+var currently_equipped : Item = null
+var crop : Dictionary
+
+@export var block : Dictionary[String, BlockData]
 
 func _ready() -> void:
-	pass
+	Inventory.current_scene = self
+	
+	Inventory.Item.add_item("Bread")
 
 func _process(_delta: float) -> void:
 	pass

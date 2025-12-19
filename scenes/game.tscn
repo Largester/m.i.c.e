@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://cliocng58qaa"]
+[gd_scene load_steps=16 format=4 uid="uid://cliocng58qaa"]
 
 [ext_resource type="Script" uid="uid://cvmnesrle14i8" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bnl20f3ryjy04" path="res://sprits/background_tile.png" id="2_iywne"]
+[ext_resource type="Texture2D" uid="uid://bbtjhuwddcvps" path="res://sprits/Ingredients.png" id="3_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bdfsj3yl53dxt" path="res://scenes/mouse.tscn" id="3_p57ef"]
 [ext_resource type="Script" uid="uid://36wo50xdswwi" path="res://scripts/currentscorelabel.gd" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cyxg4wi5d0e8m" path="res://scenes/oven.tscn" id="6_p57ef"]
@@ -20,12 +21,98 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_7jktm")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dinhu"]
+texture = ExtResource("3_kvpfn")
+texture_region_size = Vector2i(64, 64)
+2:0/0 = 0
+1:1/0 = 0
+1:1/0/custom_data_0 = "Crop"
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+0:1/0 = 0
+0:1/0/custom_data_0 = "Crop"
+1:0/0 = 0
+1:0/0/custom_data_0 = "Crop"
+0:0/0 = 0
+0:0/0/custom_data_0 = "Crop"
+0:2/0 = 0
+0:2/0/custom_data_0 = "Crop"
+1:2/0 = 0
+1:2/0/custom_data_0 = "Crop"
+
+[sub_resource type="TileSet" id="TileSet_kvuet"]
+custom_data_layer_0/name = "tile_name"
+custom_data_layer_0/type = 4
+sources/1 = SubResource("TileSetAtlasSource_dinhu")
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lbhrr")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="Background" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAAAP7/AAAAAAAAAAD///7/AAAAAAAAAAD+//7/AAAAAAAAAAD9//7/AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAADAP//AAAAAAAAAAADAP7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_ryrav")
+
+[node name="Crops" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_kvuet")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.7, 2.7)
