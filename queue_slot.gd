@@ -28,9 +28,8 @@ func _physics_process(delta):
 		time += delta
 	if time > cook_time:
 		completed.emit(recipe, self)
+		queue_free()
  
  
 func _on_cancel_pressed():
-	for key in recipe.ingredients:
-		Inventory.add_item(key, recipe.ingredients[key])
 	queue_free()

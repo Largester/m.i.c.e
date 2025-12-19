@@ -20,8 +20,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/global.gd"
-CookingSystem="*res://scenes/cooking_system.tscn"
 Inventory="*res://scenes/inventory.tscn"
+CookingSystem="*res://scenes/cooking_system.tscn"
 
 [display]
 

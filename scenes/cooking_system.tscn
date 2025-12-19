@@ -1,19 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://dctkmthq3jlro"]
+[gd_scene load_steps=7 format=3 uid="uid://dctkmthq3jlro"]
 
 [ext_resource type="Script" uid="uid://3bl0eqyij2sy" path="res://scenes/cooking_system.gd" id="1_qsbep"]
 [ext_resource type="Script" uid="uid://c4tfka8gq7jk0" path="res://Recipe.gd" id="2_qqmc6"]
 [ext_resource type="Resource" uid="uid://bwop2e2k2f31b" path="res://resources/recipes/Borscht_R.tres" id="3_0wj76"]
 [ext_resource type="Resource" uid="uid://os4imgttxxhe" path="res://resources/recipes/Burger_R.tres" id="4_5s6i4"]
 [ext_resource type="Resource" uid="uid://dnwy7edy5yipg" path="res://resources/recipes/Sushi_R.tres" id="5_qhe6w"]
+[ext_resource type="PackedScene" uid="uid://btcexjghlld6n" path="res://scenes/queue_slot.tscn" id="6_0wj76"]
 
-[node name="CookingSystem" type="Control" node_paths=PackedStringArray("recipe_container")]
+[node name="CookingSystem" type="Control" node_paths=PackedStringArray("recipe_container", "queue")]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 41.0
-offset_bottom = 40.0
+offset_right = 287.0
+offset_bottom = 170.0
+scale = Vector2(6.6682878, 6.3798175)
 script = ExtResource("1_qsbep")
 recipes = Array[ExtResource("2_qqmc6")]([ExtResource("3_0wj76"), ExtResource("4_5s6i4"), ExtResource("5_qhe6w")])
 recipe_container = NodePath("Panel/ScrollContainer/Recipes")
+queue = NodePath("")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(200, 140)
@@ -47,3 +50,71 @@ horizontal_scroll_mode = 3
 
 [node name="Recipes" type="VBoxContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -70.0
+offset_right = -3.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Queue"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 21.0
+offset_right = 20.0
+offset_bottom = 83.0
+grow_horizontal = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="QueueSlot" parent="Panel2/ScrollContainer" instance=ExtResource("6_0wj76")]
+layout_mode = 2
+
+[node name="Create" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -57.0
+offset_right = -6.0
+offset_bottom = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Create"
+
+[node name="Switch Scene" type="Button" parent="."]
+layout_mode = 0
+offset_left = 225.39519
+offset_top = 149.06383
+offset_right = 334.3952
+offset_bottom = 180.06383
+scale = Vector2(0.47500804, 0.522601)
+text = "Switch Scene"
+
+[connection signal="pressed" from="Create" to="." method="_on_create_pressed"]
+[connection signal="pressed" from="Switch Scene" to="." method="_on_switch_scene_pressed"]

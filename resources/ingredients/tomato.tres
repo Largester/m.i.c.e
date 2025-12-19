@@ -1,9 +1,15 @@
-[gd_resource type="Resource" script_class="CropData" load_steps=2 format=3 uid="uid://jao7yta2x45o"]
+[gd_resource type="Resource" script_class="CropData" load_steps=4 format=3 uid="uid://jao7yta2x45o"]
 
 [ext_resource type="Script" uid="uid://gf5f5rgumryh" path="res://CropData.gd" id="1_4ni1f"]
+[ext_resource type="Texture2D" uid="uid://bbtjhuwddcvps" path="res://sprits/Ingredients.png" id="1_7ry4t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoas7"]
+atlas = ExtResource("1_7ry4t")
+region = Rect2(64, 0, 64, 64)
 
 [resource]
 script = ExtResource("1_4ni1f")
 tile_name = "tomato"
 atlas_coords = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0)])
+icon = SubResource("AtlasTexture_xoas7")
 metadata/_custom_type_script = "uid://gf5f5rgumryh"

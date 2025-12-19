@@ -5,8 +5,7 @@ extends Area2D
 @onready var player: Node2D = $"."
 @onready var timer: Timer = $Timer
 @onready var progress_bar: ProgressBar = $ProgressBar
-
-
+@export var item_to_give : Item
 const min_progress = 0
 const max_progress = 6
 var progress = 0
@@ -43,7 +42,6 @@ func _on_area_exited(area: Area2D) -> void:
 		timer.stop()
 		
 func _on_timer_timeout() -> void:
-	print(progress)
 	progress += 1
 	#if progress < 0:
 		#progress = max_progress
@@ -52,3 +50,5 @@ func _on_timer_timeout() -> void:
 func finish():
 	if progress >= max_progress:
 		progress = min_progress
+		if item_to_give != null:
+			Inventory.add_item(item_to_give)

@@ -5,7 +5,7 @@ extends Panel
 		item = value
 		
 		if get_parent().has_method("update"):
-			get_parent().update
+			get_parent().update()
 		
 		if value == null: 
 			$Icon.texture = null
@@ -18,7 +18,7 @@ extends Panel
 @export var amount : int = 0:
 	set(value):
 		amount = value
-		$amount.text = str(value)
+		$Amount.text = str(value)
 		if amount <= 0:
 			item = null
 

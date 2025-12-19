@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bbtjhuwddcvps" path="res://sprits/Ingredients.png" id="1_cwjf7"]
 [ext_resource type="Script" uid="uid://gf5f5rgumryh" path="res://CropData.gd" id="2_ua8wc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xqajr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwjf7"]
 atlas = ExtResource("1_cwjf7")
-region = Rect2(0, 64, 128, 64)
+region = Rect2(64, 64, 64, 64)
 
 [resource]
 script = ExtResource("2_ua8wc")
 tile_name = "potato"
 atlas_coords = Array[Vector2i]([Vector2i(0, 1), Vector2i(1, 1)])
 title = "potato"
-icon = SubResource("AtlasTexture_xqajr")
+icon = SubResource("AtlasTexture_cwjf7")
 metadata/_custom_type_script = "uid://gf5f5rgumryh"

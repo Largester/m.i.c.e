@@ -43,10 +43,13 @@ func free_slots():
 		slot.free()
 
 func selection(item : Recipe, node : Panel):
+	if item == null:
+		print("clicked an empty slot!")
+		return
 	selected_recipe = item
 	selected_rect = Rect2(node.global_position, node.size)
 	queue_redraw()
-	print(item.name)
+	print(selected_recipe.name)
 
 func queue_item(item : Recipe):
 	if item == null:
@@ -75,3 +78,5 @@ func finished_cooking(item : Recipe, node : Panel):
 	Inventory.add_item(item.product, item.product_amount)
 	node.queue_free()
 	print(item.name +" added.")
+func _on_switch_scene_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/game.tscn")

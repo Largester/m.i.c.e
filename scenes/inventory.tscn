@@ -23,12 +23,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.0
-offset_top = -34.0
-offset_right = 46.0
-offset_bottom = 34.0
+offset_left = -457.00006
+offset_top = -295.0
+offset_right = -365.00006
+offset_bottom = -227.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(10.128018, 7.80534)
 columns = 4
 
 [node name="Slot" parent="UI/GridContainer" instance=ExtResource("1_qw0r6")]
@@ -74,11 +75,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -70.0
-offset_top = -20.0
-offset_right = 70.0
+offset_left = -653.0
+offset_top = -209.00006
+offset_right = -513.0
+offset_bottom = -189.00006
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(9.425709, 9.603647)
 script = ExtResource("3_ty45s")
 
 [node name="Slot" parent="UI/Hotbar" instance=ExtResource("1_qw0r6")]
